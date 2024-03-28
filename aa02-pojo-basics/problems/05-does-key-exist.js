@@ -11,8 +11,15 @@ doesKeyExist(obj1, 'name'); // => false
 ***********************************************************************/
 
 function doesKeyExist(obj, key) {
-  // Your code here 
-}
+  // Your code here
+  if(obj[key] === undefined){
+    return false;
+  }else
+    return true;
+
+
+  }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = doesKeyExist;
