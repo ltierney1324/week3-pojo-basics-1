@@ -11,7 +11,22 @@ console.log(stringConverter("banana")); // => {b: 1, a: 3, n: 2}
 console.log(stringConverter("raccoon")); // => {r: 1, a: 1, c: 2, o: 2, n: 1}
 ***********************************************************************/
 
-function stringConverter(string) {}
+function stringConverter(string) {
+    let letters = string.split("");
+    let object = {};
+
+    for (let i = 0; i < letters.length; i++) {
+        let char = letters[i];
+
+        if (object[char] === undefined) {
+            object[char] = 1;
+        } else {
+            object[char] += 1;
+        }
+    }
+    console.log(object);
+    return object;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = stringConverter;
